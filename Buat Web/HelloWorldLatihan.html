@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Simple Website</title>
+	<link rel="stylesheet" type="text/css" href="styling.css">
+</head>
+<body>
+	<header>
+		<h1>Welcome to My Simple Website</h1>
+	</header>
+
+	<nav>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</nav>
+
+	<main>
+		<h2>About Us</h2>
+		<p>We are a small company that specializes in creating simple websites for businesses and individuals. Our goal is to make it easy for anyone to have a presence on the web.</p>
+	</main>
+
+	<footer>
+		<p>&copy; 2023 My Simple Website</p>
+	</footer>
+	<script src="script/HelloWorldLatihan.js">
+		let counter = 1;
+
+		for (; counter <= 10;) {
+			document.writeln('<p>Perulangan ke ${counter}</p>')
+				counter++;
+		}
+		{
+		//for (let counter =1; counter)<=10; counter++){
+			document.writeln('<p>Perulangan ke ${counter}</p>')
+		}
+    </script>
+
+
+<body>
+	<div>
+		<input type="number" id = "angka1">
+
+		<select id = "operator">
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+		</select>
+		<input type="number" id = "angka2">
+		<span>=</span>
+		<span id="hasil">Hasil</span><br><br>
+		<button id="submit">Submit</button>
+	</div>
+		
+	<script>
+		const angka1 = document.getElementById("angka1");
+		const angka2 = document.getElementById("angka2");
+		const operator = document.getElementById("operator");
+		const hasil = document.getElementById("hasil");
+		const submit = document.getElementById("submit");
+
+		submit.addEventListener('click', function () {
+			hasil.innerText = eval(angka1.value + operator.value + angka2.value);
+			//hasil.innerText = Number(angka1.value) + operator.value + Number(angka2.value);
+			//hasil.innerText = Number(angka1.value) - Number(angka2.value);
+			//hasil.innerText = Number(angka1.value) * Number(angka2.value);
+			//hasil.innerText = Number(angka1.value) / Number(angka2.value);
+		});
+	</script>
+</body>
+</html>
